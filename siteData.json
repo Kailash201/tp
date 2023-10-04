@@ -8,6 +8,7 @@
         "about-us": "About Us",
         "project-team": "Project team",
         "kailashwaran": "Kailashwaran",
+        "nicholas-tng": "Nicholas Tng",
         "ong-zhen-dong": "Ong Zhen Dong"
       },
       "headingKeywords": {}
@@ -166,7 +167,7 @@
     },
     {
       "src": "team/nicholastng010601.md",
-      "title": "John Doe's Project Portfolio Page",
+      "title": "Nicholas Tng's Project Portfolio Page",
       "headings": {
         "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
