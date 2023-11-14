@@ -69,6 +69,7 @@ ProjectPRO is optimized for use via a Command Line Interface (CLI) while preserv
   - [10.2 Clearing All Data `clear`](#clearing-all-data-clear)
   - [10.3 Exit ProjectPRO `exit`](#exit-projectpro-exit)
 - [11. Saving the Data](#saving-the-data)
+- [12. Editing the Data File](#editing-the-data-file)
 
 
 --------------------------------------------------------------------------------------------------------------------
@@ -928,7 +929,7 @@ ProjectPRO saves automatically after any command changes the data. There is no n
 
 --------------------------------------------------------------------------------------------------------------------
 
-### Editing the data file
+### Editing the Data File
 ProjectPRO's data are saved automatically as a JSON file `[JAR file location]/data/addressbook.json`. Advanced users are welcome to update data directly by editing that data file.
 <div style="border-left: 4px solid #d9534f; background-color: #FFD4D4; color: #000; padding: 10px; margin: 5px 0; border-radius: 6px;">
   <div style="display: flex; align-items: center;">
