@@ -195,7 +195,7 @@ Written below are some commonly used parameters, what they represent, and exampl
 | `n/`      | Contact name of the student      | Alphanumeric characters (a to z, A to Z, 0 to 9)                                                                                                        | John Doe, David Li 2                     | Kishen s/o Kasinathan, ナルト, அசிங்கமான           |
 | `p/`      | Phone number of the student      | Positive integer with 3 or more digits                                                                                                                  | 999, 98765432, 18003569377               | 1-800-356-9377, 0, -1, 98431234.5               |
 | `e/`      | Email of the student             | Email prefix: Alphanumeric characters (a to z, A to Z, 0 to 9), @, Email Domain                                                                         | example@gmail.com, example@moe.edu.sg    | example@!.com, example@moed.edu.s               |
-| `g/`      | Name of the group                | Alphanumeric characters (a to z, A to Z, 0 to 9)                                                                                                        | CS2103T, Group 3                         | Group 3!, 1                                     |
+| `g/`      | Name of the group                | Alphanumeric characters (a to z, A to Z, 0 to 9)                                                                                                        | CS2103T, Group 3                         | Group 3!, Group$$                               |
 | `r/`      | Group remark                     | N/A                                                                                                                                                     | Zoom link: CS2101.zoom, 123!@#$#@        | N/A                                             |
 | `t/`      | Time interval of student / group | timings are written with the first 3 letters of the day and time in 24 hour format, with a `-` between the timings. Start time cannot be after end time | mon 1300 - mon 1400, sat 1000 - sun 1300 | monday 1300 - tuesday 1200, wed 1300 - wed 1000 |
 
@@ -477,7 +477,7 @@ You can find a group in your contact list. This allows you to view the group's m
   <p style="font-size: 11px; font-style: italic;">You are now able to view all details regarding the group "CS2103T" in your contact list.</p>
 </div>
 
-
+--------------------------------------------------------------------------------------------------------------------
 
 
 ### Listing a group: `listgroup`
@@ -621,7 +621,7 @@ This adds a time slot when Alex Yeoh is available in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have added the Monday 2 pm - 4 pm timeslot to Alex Yeoh to indicate that he is free during that time.</p>
 </div>
 
-
+--------------------------------------------------------------------------------------------------------------------
 
 ### Removing Time from a Contact: `deletetime`
 You can remove available time slots of your contacts.
@@ -907,7 +907,7 @@ Clears all entries from the contact list.
   <p style="font-size: 11px; font-style: italic;">You have cleared all the data in your contact list.</p>
 </div>
 
-
+--------------------------------------------------------------------------------------------------------------------
 
 
 ### Exit ProjectPRO: `exit`
