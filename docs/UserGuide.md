@@ -68,6 +68,8 @@ ProjectPRO is optimized for use via a Command Line Interface (CLI) while preserv
   - [10.1 Viewing Help `help`](#viewing-help-help)
   - [10.2 Clearing All Data `clear`](#clearing-all-data-clear)
   - [10.3 Exit ProjectPRO `exit`](#exit-projectpro-exit)
+- [11. Saving the Data](#saving-the-data)
+- [12. Editing the Data File](#editing-the-data-file)
 
 
 --------------------------------------------------------------------------------------------------------------------
@@ -92,7 +94,7 @@ Here are some annotations used in this guide:
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: px 0;"  ><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">USER_INPUT</code>
+  <p style="color: #000; margin: px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">USER_INPUT</code>
     Description of what you are allowed to type.</p>
 </div>
 <p></p>
@@ -101,7 +103,7 @@ Here are some annotations used in this guide:
     <img src="icons/exclamation.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;;">Warning</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">INLINE_CODE</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">INLINE_CODE</code>
     Pay attention to these points as they could lead to unexpected issues.</p>
 </div>
 
@@ -127,7 +129,7 @@ We are happy to have you on board as a first-time user of ProjectPRO! To get sta
 --------------------------------------------------------------------------------------------------------------------
 
 
-Welcome back to ProjectPRO. Simply head over to our Features section to gain insights into our commands. If you are looking for a quick reference, click [here](#table-of-contents) for our table of contents.
+Welcome back to ProjectPRO. Simply head over to our Features section [here](#features) to gain insights into our commands.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -146,6 +148,7 @@ Welcome back to ProjectPRO. Simply head over to our Features section to gain ins
      - ![MACGUIDE](images/UG/QUICKSTART3.png)
    - For Windows Users:
      - ![WINDOWSGUIDE](images/UG/QUICKSTART4.png)
+<p></p>
 4. Launch ProjectPRO.
    1. Open a command terminal.
    2. Type `cd Desktop` , followed by `cd ProjectPro`.
@@ -234,13 +237,13 @@ You can create a contact in your contact list.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code>
     must be alphanumeric, cannot be blank and must not be an existing contact in the contact list.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">PHONE</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">PHONE</code>
     must be a positive integer with at least 3 digits and must not exist in the contact list.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">EMAIL</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">EMAIL</code>
     must be alphanumeric with a @ domain, end with a domain label at least 2 characters long and must not exist in the contact list.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric. This is an <strong>optional</strong> parameter.</p>
 </div>
 
@@ -256,9 +259,6 @@ You can create a contact in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have added John Doe to your contacts, at contact number 7.</p>
 </div>
 
-**Potential error(s):**
-- Incorrect format (e.g., no prefix, duplicate prefixes).
-- The contact you are trying to add already exists in your contact list: `This person already exists in your contact list`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -275,7 +275,7 @@ You can delete a contact from your contact list.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size: 13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code>
     must be alphanumeric, cannot be blank, and must be an existing contact in the contact list.</p>
 </div>
 
@@ -289,9 +289,6 @@ You can delete a contact from your contact list.
   <p style="font-size: 11px; font-style: italic;">You have deleted John Doe, previously contact number 7, from your contacts.</p>
 </div>
 
-**Potential error(s):**
-- Invalid format (e.g., no prefix, duplicate prefixes).
-- The contact you are trying to delete does not exist in your contact list: `No person with such name found. Please provide the person's full name as in the existing contact list`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -307,7 +304,7 @@ You can find all the contacts from your contact list with the matching keywords.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size: 13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">KEYWORDS_IN_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">KEYWORDS_IN_NAME</code>
     must be alphanumeric and cannot be blank. It is <strong>not case-sensitive</strong>.</p>
 </div>
 
@@ -321,8 +318,6 @@ You can find all the contacts from your contact list with the matching keywords.
   <p style="font-size: 11px; font-style: italic;">You have found all your contacts with the name Alex or Bernice.</p>
 </div>
 
-**Potential error(s):**
-- Invalid format (e.g., no prefix, duplicate prefixes).
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -337,7 +332,7 @@ You can list all the contacts in your contact list.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size: 13px; color: #000; margin: 8px 0;">
+  <p style="color: #000; margin: 8px 0;">
     No additional input required.</p>
 </div>
 
@@ -349,9 +344,6 @@ You can list all the contacts in your contact list.
 <div align="center">
   <p style="font-size: 11px; font-style: italic;">You have listed all the contacts in your contact list.</p>
 </div>
-
-**Potential error(s):**
-- Extra inputs detected.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -375,7 +367,7 @@ You can create a new group in your contact list.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size: 13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank, and must not be an existing group in your contact list.</p>
 </div>
 
@@ -388,9 +380,6 @@ You can create a new group in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have created a new group called CS2103T tp.</p>
 </div>
 
-**Potential error(s):**
-- Invalid command format (e.g., no prefix, duplicate prefixes).
-- The group you are trying to add already exists in your contact list: `This group already exists in the contact list`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -406,7 +395,7 @@ You can delete a group in your contact list.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank and must be an existing group in your contact list.</p>
 </div>
 
@@ -420,9 +409,6 @@ You can delete a group in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have deleted the group "CS2103T tp" from your contact list.</p>
 </div>
 
-**Potential error(s):**
-- Incorrect format (e.g., no prefix, duplicate prefixes).
-- The group you are trying to delete does not exist in your contact list: `No group with such name found. Please provide the group's full name as in the existing contact list`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -439,9 +425,9 @@ You can add remarks to a group in your contact list.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank and must be an existing group in your contact list.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">REMARK</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">REMARK</code>
     can take on any value.</p>
 </div>
 
@@ -455,9 +441,6 @@ You can add remarks to a group in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have added the group remark "quiz tomorrow" to the group "CS2103T" in your contact list.</p>
 </div>
 
-**Potential errors(s):**
-- Incorrect format (e.g. no prefix, duplicate prefixes).
-- The group you entered does not exist in your contact list: `No group with such name found. Please provide the group's full name as in the existing contact list.`
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -474,7 +457,7 @@ You can find a group in your contact list. This allows you to view the group's m
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank and must be an existing group in your contact list.</p>
 </div>
 
@@ -488,9 +471,6 @@ You can find a group in your contact list. This allows you to view the group's m
 </div>
 
 
-**Potential error(s):**
-- Incorrect format (e.g. no prefix, duplicate prefixes).
-- The group you are trying to find does not exist in your contact list: `No group with such name found. Please provide the group's full name as in the existing contact list`.
 
 
 ### Listing a group: `listgroup`
@@ -503,7 +483,7 @@ You can list all the groups in your contact list.
     <div style="display: flex; align-items: center;">
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
-  </div><p style="font-size:13px; color: #000; margin: 8px 0;">
+  </div><p style="color: #000; margin: 8px 0;">
    No additional parameters.
 </div>
 
@@ -518,8 +498,6 @@ You can list all the groups in your contact list.
 </div>
 
 
-**Potential error(s):**
-- Extra inputs detected.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -536,9 +514,9 @@ You can add an existing contact to an existing group.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code>
     must be alphanumeric, cannot be blank, must be an existing contact in your contact list, and must not be a member of <code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank, and must be an existing group in your contact list.</p>
 </div>
 
@@ -553,9 +531,6 @@ You can add an existing contact to an existing group.
 </div>
 
 
-**Potential error(s):**
-- Incorrect format (e.g., no prefix, duplicate prefixes).
-- The contact you are trying to add is already a member of the group: `Bernice Yu is already in this group: CS2103T`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -572,9 +547,9 @@ You can remove a contact from a group.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code>
     must be alphanumeric, cannot be blank, must be an existing contact in your contact list, and must be a member of <code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank, and must be an existing group in your contact list.</p>
 </div>
 
@@ -588,9 +563,6 @@ You can remove a contact from a group.
   <p style="font-size: 11px; font-style: italic;">You have removed "Alex Yeoh" from the group "CS2103T".</p>
 </div>
 
-**Potential error(s):**
-- Incorrect format (e.g., no prefix, duplicate prefixes).
-- The contact you are trying to remove is not a member of the group: `Alex Yeoh is not in this group: CS2103T`.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -611,12 +583,12 @@ You can add time slots when your contacts are available.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-   <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">    NAME</code>
+   <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">    NAME</code>
      must be alphanumeric, cannot be blank and must be an existing contact in your contact list.
   </p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">FREE_TIME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">FREE_TIME</code>
   must be a time slot within the current weekly schedule. E.g. <code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">Sat 1000 - Mon 1000</code> is not allowed as the monday here refers to next week, violating the current weekly schedule pattern.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">FREE_TIME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">FREE_TIME</code>
   must be a time slot with some duration. E.g. <code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">Mon 1200 - Mon 1200</code> is not valid as there is no duration.<code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">Mon 1300- Mon 1400</code> is valid.
 It is <strong>not case-sensitive</strong>.</p>
 </div>
@@ -627,7 +599,7 @@ It is <strong>not case-sensitive</strong>.</p>
     <img src="icons/exclamation.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;;">Warning</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;">
+  <p style="color: #000; margin: 8px 0;">
 <code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">FREE_TIME</code>
   must not clash with the other inputted/existing time slots of the contact. E.g. If time slot <code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">Mon 1200 - Mon 1300</code> has been added, then <code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">Mon 1300 - Mon 1400</code> can not be added. 
 </div>
@@ -642,9 +614,6 @@ This adds a time slot when Alex Yeoh is available in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have added the Monday 2 pm - 4 pm timeslot to Alex Yeoh to indicate that he is free during that time.</p>
 </div>
 
-**Potential error(s):**
-- Contact does not exist in the contact list.
-- The time slot you are trying to add is not valid.
 
 
 ### Removing Time from a Contact: `deletetime`
@@ -659,10 +628,10 @@ You can remove available time slots of your contacts.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">    NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">    NAME</code>
      must be alphanumeric, cannot be blank and must be an existing contact in your contact list.
   </p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">FREE_TIME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">FREE_TIME</code>
   must match the contact's existing time. It is <strong>not case-sensitive</strong>.</p>
 </div>
 
@@ -672,7 +641,7 @@ You can remove available time slots of your contacts.
     <img src="icons/exclamation.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;;">Warning</h5>
   </div>
- <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">FREE_TIME</code>
+ <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">FREE_TIME</code>
   must not clash with other inputted time slots.</p>
 </div>
 
@@ -686,10 +655,6 @@ You can remove available time slots of your contacts.
   <p style="font-size: 11px; font-style: italic;">You have deleted the Monday 2 pm - 4 pm time slot from Alex Yeoh to indicate that he is not free during that time anymore.</p>
 </div>
 
-**Potential error(s):**
-- Contact does not exist in the contact list.
-- Time slot does not exist for the contact.
-- Invalid time slot format.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -704,7 +669,7 @@ You list all available time slots of your contacts.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code> 
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">NAME</code> 
     must be alphanumeric, cannot be blank and must be an existing contact in your contact list.</p>
 </div>
 
@@ -721,8 +686,6 @@ You list all available time slots of your contacts.
   <p style="font-size: 13px; font-style: italic;">You have listed Alex Yeoh's free times.</p>
 </div>
 
-**Potential error(s):**
-- Contact does not exist in the contact list.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -738,9 +701,9 @@ You can add a meeting time slot for your group.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank and must be an existing group in your contact list.</p>
-<p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">MEETING_TIME</code>
+<p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">MEETING_TIME</code>
     must be a time slot within the weekly schedule and must not clash with the group's existing meeting times.  It is <strong>not case-sensitive</strong>.</p>
 </div>
 <p></p>
@@ -750,7 +713,7 @@ You can add a meeting time slot for your group.
     <img src="icons/exclamation.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;;">Warning</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">MEETING_TIME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">MEETING_TIME</code>
     can be added even if some members are not available for the time slot. Do coordinate with your group members on the most suitable time slots.</p>
 </div>
 
@@ -764,9 +727,6 @@ You can add a meeting time slot for your group.
   <p style="font-size: 13px; font-style: italic;">You have added a Monday 2 pm - 4 pm meeting for the group "CS2103T".</p>
 </div>
 
-**Potential error(s):**
-- Group does not exist in the contact list.
-- Invalid time slot format.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -781,9 +741,9 @@ You can remove meeting times from your groups.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank and must be an existing group in your contact list.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">MEETING_TIME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">MEETING_TIME</code>
     must be a time slot within a weekly schedule and must be an existing meeting slot of the group. It is <strong>not case-sensitive</strong>.</p>
 </div>
 <p></p>
@@ -798,11 +758,6 @@ You can remove meeting times from your groups.
   <p style="font-size: 13px; font-style: italic;">You have deleted the Monday 2 pm - 4 pm meeting for the group "CS2103T".</p>
 </div>
 
-**Potential error(s):**
-- Group does not exist in the contact list.
-- Group does not contain meeting time.
-- Invalid time slot format.
-
 --------------------------------------------------------------------------------------------------------------------
 
 ### Listing Meeting Time from a Group: `listtime`
@@ -816,7 +771,7 @@ You list meeting time for your groups.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank and must be an existing group in your contact list.</p>
 </div>
 <p></p>
@@ -832,9 +787,6 @@ You list meeting time for your groups.
   <p style="font-size: 11px; font-style: italic;">You can see all the meetings you have for CS2103T/p>
 </div>
 
-**Potential error(s):**
-- Group does not exist in the contact list.
-
 --------------------------------------------------------------------------------------------------------------------
 
 ### Finding Free Time of a Group: `findfreetime`
@@ -849,9 +801,9 @@ You can find a meeting time slot for your group where everyone is available.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must be alphanumeric, cannot be blank and must be an existing group in your contact list.</p>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">DURATION</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #F0C481; padding: 2px; border-radius: 2px;">DURATION</code>
     must be a whole number representing the meeting duration in minutes.</p>
 </div>
 <p></p>
@@ -860,7 +812,7 @@ You can find a meeting time slot for your group where everyone is available.
     <img src="icons/exclamation.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;;">Warning</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;"><code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
+  <p style="color: #000; margin: 8px 0;"><code style="color: #555; background-color: #FB9A9A; padding: 2px; border-radius: 2px;">GROUP_NAME</code>
     must contain contacts with their free time slots. </p>
 </div>
 
@@ -875,9 +827,6 @@ You can find a meeting time slot for your group where everyone is available.
 </div>
 
 
-**Potential error(s):**
-- Group does not exist in the contact list.
-- Contacts in the group did not add their available time slots.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -900,7 +849,7 @@ You can view the link to our User Guide.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;">
+  <p style="color: #000; margin: 8px 0;">
     No additional input required.</p>
 </div>
 <p></p>
@@ -917,8 +866,6 @@ You can view the link to our User Guide.
 </div>
 
 
-**Potential error(s):**
-- Extra inputs detected.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -936,7 +883,7 @@ Clears all entries from the contact list.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;">
+  <p style="color: #000; margin: 8px 0;">
     No additional input required.</p>
 </div>
 <p></p>
@@ -954,8 +901,6 @@ Clears all entries from the contact list.
 </div>
 
 
-**Potential error(s):**
-- Extra inputs detected.
 
 
 ### Exit ProjectPRO: `exit`
@@ -970,30 +915,28 @@ You can exit ProjectPRO.
     <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable values</h5>
   </div>
-  <p style="font-size:13px; color: #000; margin: 8px 0;">
+  <p style="color: #000; margin: 8px 0;">
     No additional input required.</p>
 </div>
 <p></p>
 
 
-**Potential error(s):**
-- Extra inputs detected.
 
 --------------------------------------------------------------------------------------------------------------------
 
-### Saving the data
+### Saving the Data
 ProjectPRO saves automatically after any command changes the data. There is no need to save manually.
 
 --------------------------------------------------------------------------------------------------------------------
 
-### Editing the data file
+### Editing the Data File
 ProjectPRO's data are saved automatically as a JSON file `[JAR file location]/data/addressbook.json`. Advanced users are welcome to update data directly by editing that data file.
 <div style="border-left: 4px solid #d9534f; background-color: #FFD4D4; color: #000; padding: 10px; margin: 5px 0; border-radius: 6px;">
   <div style="display: flex; align-items: center;">
     <img src="icons/exclamation.png" width="20" height="20" style="margin-right: 5px;">
     <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;;">Warning</h5>
   </div>
-<p style="font-size:13px; color: #000; margin: 8px 0;">
+<p style="color: #000; margin: 8px 0;">
     If your changes to the data file makes its format invalid, ProjectPRO will discard all data and start with a sample data file. Hence, it is recommended to take a backup of the file before editing it.
 </p>
 </div>
