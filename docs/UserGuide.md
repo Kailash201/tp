@@ -150,8 +150,7 @@ Welcome back to ProjectPRO. Simply head over to our Features section to gain ins
    1. Open a command terminal.
    2. Type `cd Desktop` , followed by `cd ProjectPro`.
    3. Type `java -jar ProjectPRO.jar` to run the application.
-
-
+<p></p>
 5. Start using ProjectPRO!
 
 --------------------------------------------------------------------------------------------------------------------
@@ -257,9 +256,6 @@ You can create a contact in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have added John Doe to your contacts, at contact number 7.</p>
 </div>
 
-**Potential error(s):**
-- Incorrect format (e.g., no prefix, duplicate prefixes).
-- The contact you are trying to add already exists in your contact list: `This person already exists in your contact list`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -290,9 +286,6 @@ You can delete a contact from your contact list.
   <p style="font-size: 11px; font-style: italic;">You have deleted John Doe, previously contact number 7, from your contacts.</p>
 </div>
 
-**Potential error(s):**
-- Invalid format (e.g., no prefix, duplicate prefixes).
-- The contact you are trying to delete does not exist in your contact list: `No person with such name found. Please provide the person's full name as in the existing contact list`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -322,8 +315,6 @@ You can find all the contacts from your contact list with the matching keywords.
   <p style="font-size: 11px; font-style: italic;">You have found all your contacts with the name Alex or Bernice.</p>
 </div>
 
-**Potential error(s):**
-- Invalid format (e.g., no prefix, duplicate prefixes).
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -350,9 +341,6 @@ You can list all the contacts in your contact list.
 <div align="center">
   <p style="font-size: 11px; font-style: italic;">You have listed all the contacts in your contact list.</p>
 </div>
-
-**Potential error(s):**
-- Extra inputs detected.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -389,9 +377,6 @@ You can create a new group in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have created a new group called CS2103T tp.</p>
 </div>
 
-**Potential error(s):**
-- Invalid command format (e.g., no prefix, duplicate prefixes).
-- The group you are trying to add already exists in your contact list: `This group already exists in the contact list`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -421,9 +406,6 @@ You can delete a group in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have deleted the group "CS2103T tp" from your contact list.</p>
 </div>
 
-**Potential error(s):**
-- Incorrect format (e.g., no prefix, duplicate prefixes).
-- The group you are trying to delete does not exist in your contact list: `No group with such name found. Please provide the group's full name as in the existing contact list`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -456,9 +438,6 @@ You can add remarks to a group in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have added the group remark "quiz tomorrow" to the group "CS2103T" in your contact list.</p>
 </div>
 
-**Potential errors(s):**
-- Incorrect format (e.g. no prefix, duplicate prefixes).
-- The group you entered does not exist in your contact list: `No group with such name found. Please provide the group's full name as in the existing contact list.`
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -489,9 +468,6 @@ You can find a group in your contact list. This allows you to view the group's m
 </div>
 
 
-**Potential error(s):**
-- Incorrect format (e.g. no prefix, duplicate prefixes).
-- The group you are trying to find does not exist in your contact list: `No group with such name found. Please provide the group's full name as in the existing contact list`.
 
 
 ### Listing a group: `listgroup`
@@ -519,8 +495,6 @@ You can list all the groups in your contact list.
 </div>
 
 
-**Potential error(s):**
-- Extra inputs detected.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -554,9 +528,6 @@ You can add an existing contact to an existing group.
 </div>
 
 
-**Potential error(s):**
-- Incorrect format (e.g., no prefix, duplicate prefixes).
-- The contact you are trying to add is already a member of the group: `Bernice Yu is already in this group: CS2103T`.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -589,9 +560,6 @@ You can remove a contact from a group.
   <p style="font-size: 11px; font-style: italic;">You have removed "Alex Yeoh" from the group "CS2103T".</p>
 </div>
 
-**Potential error(s):**
-- Incorrect format (e.g., no prefix, duplicate prefixes).
-- The contact you are trying to remove is not a member of the group: `Alex Yeoh is not in this group: CS2103T`.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -643,9 +611,6 @@ This adds a time slot when Alex Yeoh is available in your contact list.
   <p style="font-size: 11px; font-style: italic;">You have added the Monday 2 pm - 4 pm timeslot to Alex Yeoh to indicate that he is free during that time.</p>
 </div>
 
-**Potential error(s):**
-- Contact does not exist in the contact list.
-- The time slot you are trying to add is not valid.
 
 
 ### Removing Time from a Contact: `deletetime`
@@ -687,10 +652,6 @@ You can remove available time slots of your contacts.
   <p style="font-size: 11px; font-style: italic;">You have deleted the Monday 2 pm - 4 pm time slot from Alex Yeoh to indicate that he is not free during that time anymore.</p>
 </div>
 
-**Potential error(s):**
-- Contact does not exist in the contact list.
-- Time slot does not exist for the contact.
-- Invalid time slot format.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -722,8 +683,6 @@ You list all available time slots of your contacts.
   <p style="font-size: 13px; font-style: italic;">You have listed Alex Yeoh's free times.</p>
 </div>
 
-**Potential error(s):**
-- Contact does not exist in the contact list.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -765,9 +724,6 @@ You can add a meeting time slot for your group.
   <p style="font-size: 13px; font-style: italic;">You have added a Monday 2 pm - 4 pm meeting for the group "CS2103T".</p>
 </div>
 
-**Potential error(s):**
-- Group does not exist in the contact list.
-- Invalid time slot format.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -799,11 +755,6 @@ You can remove meeting times from your groups.
   <p style="font-size: 13px; font-style: italic;">You have deleted the Monday 2 pm - 4 pm meeting for the group "CS2103T".</p>
 </div>
 
-**Potential error(s):**
-- Group does not exist in the contact list.
-- Group does not contain meeting time.
-- Invalid time slot format.
-
 --------------------------------------------------------------------------------------------------------------------
 
 ### Listing Meeting Time from a Group: `listtime`
@@ -832,9 +783,6 @@ You list meeting time for your groups.
 <div align="center">
   <p style="font-size: 11px; font-style: italic;">You can see all the meetings you have for CS2103T/p>
 </div>
-
-**Potential error(s):**
-- Group does not exist in the contact list.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -876,9 +824,6 @@ You can find a meeting time slot for your group where everyone is available.
 </div>
 
 
-**Potential error(s):**
-- Group does not exist in the contact list.
-- Contacts in the group did not add their available time slots.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -918,8 +863,6 @@ You can view the link to our User Guide.
 </div>
 
 
-**Potential error(s):**
-- Extra inputs detected.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -955,8 +898,6 @@ Clears all entries from the contact list.
 </div>
 
 
-**Potential error(s):**
-- Extra inputs detected.
 
 
 ### Exit ProjectPRO: `exit`
@@ -977,8 +918,6 @@ You can exit ProjectPRO.
 <p></p>
 
 
-**Potential error(s):**
-- Extra inputs detected.
 
 --------------------------------------------------------------------------------------------------------------------
 
