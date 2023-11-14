@@ -1,14 +1,27 @@
 package seedu.address.model;
 
+/**
+ * A class returning the duration of time
+ */
 public class Duration {
 
-	private int duration;
-	public Duration(int duration) {
-		this.duration = duration;
-	}
+    private final int duration;
 
-	public int getDurationInMin() {
-		return this.duration;
-	}
+    public Duration(int duration) {
+        this.duration = duration;
+    }
+
+    /**
+     * Returns the length of duration
+     * @return duration in minutes
+     */
+    public int getDurationInMin() {
+        return this.duration;
+    }
+
+    public String toString() {
+        return Integer.toString(duration);
+    }
+
 
 }

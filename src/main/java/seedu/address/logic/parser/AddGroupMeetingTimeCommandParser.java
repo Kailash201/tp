@@ -1,26 +1,25 @@
 package seedu.address.logic.parser;
 
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.*;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_FREETIME;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_GROUPTAG;
 
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
 import seedu.address.logic.commands.AddGroupMeetingTimeCommand;
-import seedu.address.logic.commands.AddTimeCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.TimeInterval;
 import seedu.address.model.group.Group;
-import seedu.address.model.person.Name;
 
 /**
- * Parses input arguments and creates a new AddGroupFreeTimeCommand object
+ * Parses input arguments and creates a new AddGroupMeetingTimeCommand object
  */
 public class AddGroupMeetingTimeCommandParser implements Parser<AddGroupMeetingTimeCommand> {
 
     /**
-     * Parses the given {@code String} of arguments in the context of the AddGroupFreeTimeCommand
-     * and returns a AddGroupFreeTimeCommand object for execution.
+     * Parses the given {@code String} of arguments in the context of the AddGroupMeetingTimeCommand
+     * and returns a AddGroupMeetingTimeCommand object for execution.
      * @throws ParseException if the user input does not conform the expected format
      */
     public AddGroupMeetingTimeCommand parse(String args) throws ParseException {
@@ -29,7 +28,8 @@ public class AddGroupMeetingTimeCommandParser implements Parser<AddGroupMeetingT
 
         if (!arePrefixesPresent(argMultimap, PREFIX_GROUPTAG, PREFIX_FREETIME)
                 || !argMultimap.getPreamble().isEmpty()) {
-            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddGroupMeetingTimeCommand.MESSAGE_USAGE));
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT,
+                    AddGroupMeetingTimeCommand.MESSAGE_USAGE));
         }
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_GROUPTAG);

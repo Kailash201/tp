@@ -2,22 +2,22 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_GROUPTAG;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_GROUPREMARK;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_GROUPTAG;
+
+import java.util.stream.Stream;
 
 import seedu.address.logic.commands.GroupRemarkCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.group.GroupRemark;
 
-import java.util.stream.Stream;
-
 /**
- * Parses input arguments and creates a new {@code RemarkCommand} object
+ * Parses input arguments and creates a new {@code GroupRemarkCommand} object
  */
 public class GroupRemarkCommandParser implements Parser<GroupRemarkCommand> {
     /**
-     * Parses the given {@code String} of arguments in the context of the {@code RemarkCommand}
-     * and returns a {@code RemarkCommand} object for execution.
+     * Parses the given {@code String} of arguments in the context of the {@code GroupRemarkCommand}
+     * and returns a {@code GroupRemarkCommand} object for execution.
      * @throws ParseException if the user input does not conform the expected format
      */
     public GroupRemarkCommand parse(String args) throws ParseException {

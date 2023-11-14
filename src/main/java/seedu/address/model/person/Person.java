@@ -8,8 +8,8 @@ import java.util.Objects;
 
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.TimeIntervalList;
 import seedu.address.model.TimeInterval;
+import seedu.address.model.TimeIntervalList;
 import seedu.address.model.group.Group;
 import seedu.address.model.group.GroupList;
 
@@ -117,13 +117,6 @@ public class Person {
         return isSameName(otherPerson);
     }
 
-    public boolean isSameGroups(Person otherPerson) {
-        if (otherPerson == this) {
-            return true;
-        }
-        return otherPerson != null && otherPerson.getGroups().equals(this.getGroups());
-    }
-
     /**
      * Returns true if both persons have the same name.
      * This defines a weaker notion of equality between two persons.
@@ -185,7 +178,8 @@ public class Person {
         return name.equals(otherPerson.name)
             && phone.equals(otherPerson.phone)
             && email.equals(otherPerson.email)
-            && personGroups.equals(otherPerson.personGroups);
+            && personGroups.equals(otherPerson.personGroups)
+            && timeIntervalList.equals(otherPerson.timeIntervalList);
     }
 
     @Override
@@ -212,7 +206,7 @@ public class Person {
         this.timeIntervalList.addTime(toAddFreeTime);
     }
 
-    public String addFreeTime(ArrayList<TimeInterval> toAddFreeTime) throws CommandException {
+    public String addFreeTime(ArrayList<TimeInterval> toAddFreeTime) {
         return this.timeIntervalList.addTime(toAddFreeTime);
     }
 

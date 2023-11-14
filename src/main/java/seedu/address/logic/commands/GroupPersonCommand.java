@@ -7,8 +7,8 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import javafx.util.Pair;
 import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.group.Group;
 import seedu.address.model.Model;
+import seedu.address.model.group.Group;
 import seedu.address.model.person.Person;
 
 /**
@@ -18,12 +18,10 @@ public class GroupPersonCommand extends Command {
 
     public static final String COMMAND_WORD = "group";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a person to a group in " +
-        "the address book.\n" + "Parameters: " + PREFIX_NAME + "NAME " + PREFIX_GROUPTAG + "GROUP ";
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a person to a group in "
+            + "the address book.\n" + "Parameters: " + PREFIX_NAME + "NAME " + PREFIX_GROUPTAG + "GROUP ";
 
     public static final String MESSAGE_SUCCESS = "%1$s is now a part of %2$s";
-    public static final String MESSAGE_DUPLICATE_PERSON_IN_GROUP =
-        "Error, invalid input entered, unable to put the person into group";
 
     private final String personName;
     private final String groupName;
@@ -42,15 +40,13 @@ public class GroupPersonCommand extends Command {
     @Override
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
+
+
         Pair<Person, Group> output = model.groupPerson(this.personName, this.groupName);
         Person person = output.getKey();
         Group group = output.getValue();
-
-        // person already in the group
-        System.out.println(person.toString());
-
         return new CommandResult(String.format(MESSAGE_SUCCESS, person.getName().fullName, group.getGroupName()));
-	}
+    }
 
     @Override
     public boolean equals(Object other) {
@@ -64,17 +60,17 @@ public class GroupPersonCommand extends Command {
         }
 
         GroupPersonCommand otherGroupPersonCommand = (GroupPersonCommand) other;
-        // to check
-        return this.equals(otherGroupPersonCommand);
+
+        return this.personName.equals(otherGroupPersonCommand.personName)
+                && this.groupName.equals(otherGroupPersonCommand.groupName);
 
     }
 
-    // to fix
     @Override
-    public java.lang.String toString() {
+    public String toString() {
         return new ToStringBuilder(this)
             .add("toAddToGroup", "")
             .toString();
     }
-}
 
+}

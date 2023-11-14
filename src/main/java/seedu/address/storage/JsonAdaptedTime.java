@@ -1,15 +1,22 @@
 package seedu.address.storage;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import seedu.address.commons.exceptions.IllegalValueException;
-import seedu.address.model.Time;
-import seedu.address.model.TimeInterval;
+import static java.util.Objects.requireNonNull;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import seedu.address.commons.exceptions.IllegalValueException;
+import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.Time;
+import seedu.address.model.TimeInterval;
+
+/**
+ * Jackson-friendly version of {@link Time}.
+ */
 public class JsonAdaptedTime {
 
     public static final String MISSING_FIELD_MESSAGE_FORMAT = "Interval's %s time field is missing!";
@@ -30,6 +37,7 @@ public class JsonAdaptedTime {
      * Converts a given {@code TimeInterval} into this class for Jackson use.
      */
     public JsonAdaptedTime(TimeInterval source) {
+        requireNonNull(source);
         this.start = source.getStart().toString();
         this.end = source.getEnd().toString();
     }
@@ -43,9 +51,16 @@ public class JsonAdaptedTime {
         if (start == null) {
             throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT, "start"));
         }
+        if (!Time.isValidTime(start)) {
+            throw new IllegalValueException(Time.MESSAGE_CONSTRAINTS);
+        }
         if (end == null) {
             throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT, "end"));
         }
+        if (!Time.isValidTime(end)) {
+            throw new IllegalValueException(Time.MESSAGE_CONSTRAINTS);
+        }
+
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HHmm");
         String[] startArray = start.split(" ");
         String[] endArray = end.split(" ");
@@ -54,6 +69,11 @@ public class JsonAdaptedTime {
         LocalTime startTime = LocalTime.parse(startArray[1], formatter);
         LocalTime endTime = LocalTime.parse(endArray[1], formatter);
 
-        return new TimeInterval(new Time(startDay,startTime), new Time(endDay,endTime));
+        Time start = new Time(startDay, startTime);
+        Time end = new Time(endDay, endTime);
+        if (!TimeInterval.isValidTimeIntervalLogic(start, end)) {
+            throw new ParseException(TimeInterval.MESSAGE_CONSTRAINTS_LOGIC);
+        }
+        return new TimeInterval(start, end);
     }
 }

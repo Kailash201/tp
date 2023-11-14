@@ -1,14 +1,19 @@
 package seedu.address.logic.commands;
 
+import static java.util.Objects.requireNonNull;
+
+import java.util.ArrayList;
+
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.TimeInterval;
 import seedu.address.model.person.Name;
 
-import java.util.ArrayList;
 
-import static java.util.Objects.requireNonNull;
 
+/**
+ * Deletes a person's free time
+ */
 public class DeletePersonTimeCommand extends DeleteTimeCommand {
     private final ArrayList<TimeInterval> timeIntervalsToDelete;
     private final Name personName;
@@ -26,13 +31,13 @@ public class DeletePersonTimeCommand extends DeleteTimeCommand {
     @Override
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
-        String status;
+        String commandOutcome;
         if (model.hasPerson(personName)) {
-           status = model.deleteTimeFromPerson(personName, timeIntervalsToDelete);
+            commandOutcome = model.deleteTimeFromPerson(personName, timeIntervalsToDelete);
         } else {
             throw new CommandException("Person does not exist \n");
         }
-        return new CommandResult(String.format(MESSAGE_DELETE_TIME_SUCCESS + status, personName.fullName));
+        return new CommandResult(String.format(MESSAGE_DELETE_TIME + "\n" + commandOutcome, personName.toString()));
     }
 
     @Override

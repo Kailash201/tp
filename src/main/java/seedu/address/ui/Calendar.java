@@ -1,7 +1,5 @@
 package seedu.address.ui;
 
-import java.net.URL;
-import java.util.ArrayList;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -9,26 +7,31 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Region;
-import seedu.address.model.TimeInterval;
 import seedu.address.model.group.Group;
-import seedu.address.model.person.Person;
+import seedu.address.ui.util.GroupTimeContainer;
 
+/**
+ * The UI component that is responsible for the calendar.
+ */
 public class Calendar extends UiPart<Region> {
 
-    private static final String FXML = "CalendarList.fxml";
+    private static final String FXML = "Calendar.fxml";
     private final ObservableList<Group> groupList;
-    private ObservableList<GroupTimeContainer> dayTaskMon = FXCollections.observableArrayList();
-    private ObservableList<GroupTimeContainer> dayTaskTue = FXCollections.observableArrayList();
-    private ObservableList<GroupTimeContainer> dayTaskWed = FXCollections.observableArrayList();
-    private ObservableList<GroupTimeContainer> dayTaskThu = FXCollections.observableArrayList();
-    private ObservableList<GroupTimeContainer> dayTaskFri = FXCollections.observableArrayList();
-    private ObservableList<GroupTimeContainer> dayTaskSat = FXCollections.observableArrayList();
-    private ObservableList<GroupTimeContainer> dayTaskSun = FXCollections.observableArrayList();
-    private ObservableList<ObservableList<GroupTimeContainer>> day = FXCollections.observableArrayList();
+    private final ObservableList<GroupTimeContainer> dayTaskMon = FXCollections.observableArrayList();
+    private final ObservableList<GroupTimeContainer> dayTaskTue = FXCollections.observableArrayList();
+    private final ObservableList<GroupTimeContainer> dayTaskWed = FXCollections.observableArrayList();
+    private final ObservableList<GroupTimeContainer> dayTaskThu = FXCollections.observableArrayList();
+    private final ObservableList<GroupTimeContainer> dayTaskFri = FXCollections.observableArrayList();
+    private final ObservableList<GroupTimeContainer> dayTaskSat = FXCollections.observableArrayList();
+    private final ObservableList<GroupTimeContainer> dayTaskSun = FXCollections.observableArrayList();
+    private final ObservableList<ObservableList<GroupTimeContainer>> day = FXCollections.observableArrayList();
 
     @FXML
     private ListView<ObservableList<GroupTimeContainer>> dayListView;
 
+    /**
+     * Creates a {@code Calendar with tasks} with the given {@code groupList}.
+     */
     public Calendar(ObservableList<Group> groupList) {
         super(FXML);
         this.groupList = groupList;
@@ -51,6 +54,10 @@ public class Calendar extends UiPart<Region> {
         dayListView.setCellFactory(listView -> new DayListViewCell());
     }
 
+    /**
+     * Custom {@code ListCell} that displays the graphics of a {@code ObservableList<GroupTimeContainer>}
+     * using a {@code DayCard}.
+     */
     class DayListViewCell extends ListCell<ObservableList<GroupTimeContainer>> {
         @Override
         protected void updateItem(ObservableList<GroupTimeContainer> grpTimeContainer, boolean empty) {

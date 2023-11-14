@@ -1,14 +1,17 @@
 package seedu.address.logic.commands;
 
+import static java.util.Objects.requireNonNull;
+
+import java.util.ArrayList;
+
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.TimeInterval;
 import seedu.address.model.group.Group;
 
-import java.util.ArrayList;
-
-import static java.util.Objects.requireNonNull;
-
+/**
+ * Deletes a group's meeting time
+ */
 public class DeleteGroupTimeCommand extends DeleteTimeCommand {
     private final ArrayList<TimeInterval> timeIntervalsToDelete;
     private final Group group;
@@ -26,12 +29,13 @@ public class DeleteGroupTimeCommand extends DeleteTimeCommand {
     @Override
     public CommandResult execute(Model model) throws CommandException {
         requireNonNull(model);
+        String commandOutcome;
         if (model.hasGroup(group)) {
-            model.deleteTimeFromGroup(group, timeIntervalsToDelete);
+            commandOutcome = model.deleteTimeFromGroup(group, timeIntervalsToDelete);
         } else {
             throw new CommandException("Group does not exists");
         }
-        return new CommandResult(String.format(MESSAGE_DELETE_TIME_SUCCESS, group.getGroupName()));
+        return new CommandResult(String.format(MESSAGE_DELETE_TIME + "\n" + commandOutcome, group.getGroupName()));
     }
 
     @Override

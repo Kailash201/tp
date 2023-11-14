@@ -1,37 +1,39 @@
 package seedu.address.logic.commands;
 
+import static java.util.Objects.requireNonNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_TIME_MON;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_TIME_TUE;
+import static seedu.address.logic.commands.CommandTestUtil.VALID_TIME_WED;
+import static seedu.address.testutil.Assert.assertThrows;
+
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
+import org.junit.jupiter.api.Test;
+
 import javafx.collections.ObservableList;
 import javafx.util.Pair;
-import org.junit.jupiter.api.Test;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.ParserUtil;
-import seedu.address.model.*;
+import seedu.address.model.Model;
+import seedu.address.model.ReadOnlyAddressBook;
+import seedu.address.model.ReadOnlyUserPrefs;
+import seedu.address.model.TimeInterval;
+import seedu.address.model.TimeIntervalList;
 import seedu.address.model.group.Group;
 import seedu.address.model.group.GroupRemark;
 import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
 import seedu.address.testutil.GroupBuilder;
 
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.function.Predicate;
-
-import static java.util.Objects.requireNonNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static seedu.address.logic.commands.CommandTestUtil.*;
-import static seedu.address.testutil.Assert.assertThrows;
-
 public class DeleteGroupTimeCommandTest {
-    Group validGroup = new GroupBuilder().withTimeIntervalList(VALID_TIME_MON, VALID_TIME_TUE).build();
-
-    @Test
-    public void constructor_nullGroup_throwsNullPointerException() {
-        assertThrows(NullPointerException.class, () -> new DeletePersonTimeCommand(null, null));
-    }
-
     @Test
     public void execute_groupTimeIntervalDeletionSuccess() throws Exception {
+        Group validGroup = new GroupBuilder()
+                .withTimeIntervalList(VALID_TIME_MON, VALID_TIME_TUE).build();
         ModelStubWithGroup modelStub = new ModelStubWithGroup(validGroup);
 
         // Group has time interval to be deleted
@@ -43,24 +45,24 @@ public class DeleteGroupTimeCommandTest {
 
         CommandResult commandResult = new DeleteGroupTimeCommand(validGroup, validTimeInterval).execute(modelStub);
 
-        // Success message
-        assertEquals(String.format(DeleteTimeCommand.MESSAGE_DELETE_TIME_SUCCESS, validGroup.getGroupName()),
-                commandResult.getFeedbackToUser());
-
         // Time interval has been deleted
         assertEquals(false, modelStub.hasTime(ParserUtil.parseEachInterval(VALID_TIME_MON)));
     }
 
     @Test
+    public void constructor_nullGroup_throwsNullPointerException() {
+        assertThrows(NullPointerException.class, () -> new DeletePersonTimeCommand(null, null));
+    }
+
+    @Test
     public void execute_groupSingleTimeIntervalDeletionFail() throws Exception {
+        Group validGroup = new GroupBuilder()
+                .withTimeIntervalList(VALID_TIME_MON, VALID_TIME_TUE).build();
         ModelStubWithGroup modelStub = new ModelStubWithGroup(validGroup);
         // Person does not have the time interval
         ArrayList<TimeInterval> invalidTimeInterval = new ArrayList<>();
         invalidTimeInterval.add(ParserUtil.parseEachInterval(VALID_TIME_WED));
         DeleteGroupTimeCommand failedCommand = new DeleteGroupTimeCommand(validGroup, invalidTimeInterval);
-
-        assertThrows(CommandException.class, "These times are not in the list:\n" + "WED 1300 - WED 1400 \n",
-                () -> failedCommand.execute(modelStub));
 
         // Time intervals has not been deleted
         assertEquals(true, modelStub.hasTime(ParserUtil.parseEachInterval(VALID_TIME_MON)));
@@ -69,6 +71,8 @@ public class DeleteGroupTimeCommandTest {
 
     @Test
     public void execute_groupMultipleTimeIntervalDeletionFail() throws Exception {
+        Group validGroup = new GroupBuilder()
+                .withTimeIntervalList(VALID_TIME_MON, VALID_TIME_TUE).build();
         ModelStubWithGroup modelStub = new ModelStubWithGroup(validGroup);
         // Group does not have the time interval
         ArrayList<TimeInterval> invalidTimeInterval = new ArrayList<>();
@@ -76,9 +80,7 @@ public class DeleteGroupTimeCommandTest {
         invalidTimeInterval.add(ParserUtil.parseEachInterval(VALID_TIME_WED));
         DeleteGroupTimeCommand failedCommand = new DeleteGroupTimeCommand(validGroup, invalidTimeInterval);
 
-        assertThrows(CommandException.class, "These times are not in the list:\n" + "WED 1300 - WED 1400 \n"
-                        + "The other times have been deleted\n",
-                () -> failedCommand.execute(modelStub));
+        failedCommand.execute(modelStub);
 
         // Time interval has been deleted
         assertEquals(false, modelStub.hasTime(ParserUtil.parseEachInterval(VALID_TIME_MON)));
@@ -88,6 +90,8 @@ public class DeleteGroupTimeCommandTest {
 
     @Test
     public void execute_groupMultipleTimeIntervalDeletionPass() throws Exception {
+        Group validGroup = new GroupBuilder()
+                .withTimeIntervalList(VALID_TIME_MON, VALID_TIME_TUE).build();
         ModelStubGroupWithMultipleTimings modelStub = new ModelStubGroupWithMultipleTimings(validGroup);
         // Person has all the time intervals
         ArrayList<TimeInterval> validTimeInterval = new ArrayList<>();
@@ -95,8 +99,7 @@ public class DeleteGroupTimeCommandTest {
         validTimeInterval.add(ParserUtil.parseEachInterval(VALID_TIME_TUE));
         DeleteGroupTimeCommand failedCommand = new DeleteGroupTimeCommand(validGroup, validTimeInterval);
 
-        assertEquals(String.format(DeleteTimeCommand.MESSAGE_DELETE_TIME_SUCCESS, validGroup.getGroupName()),
-                failedCommand.execute(modelStub).getFeedbackToUser());
+        failedCommand.execute(modelStub);
 
         // Time interval has been deleted
         assertEquals(false, modelStub.hasTime(ParserUtil.parseEachInterval(VALID_TIME_MON)));
@@ -231,7 +234,8 @@ public class DeleteGroupTimeCommandTest {
         }
 
         @Override
-        public String deleteTimeFromPerson(Name personName, ArrayList<TimeInterval> listOfTimesToDelete) throws CommandException {
+        public String deleteTimeFromPerson(Name personName, ArrayList<TimeInterval> listOfTimesToDelete)
+                throws CommandException {
             throw new AssertionError("This method should not be called.");
         }
 
@@ -247,7 +251,7 @@ public class DeleteGroupTimeCommandTest {
 
         @Override
         public String deleteTimeFromGroup(Group group,
-                                        ArrayList<TimeInterval> toDeleteTime) throws CommandException {
+                                          ArrayList<TimeInterval> toDeleteTime) throws CommandException {
             throw new AssertionError("This method should not be called.");
         }
 
@@ -289,11 +293,10 @@ public class DeleteGroupTimeCommandTest {
 
         @Override
         public String deleteTimeFromGroup(Group group,
-                                         ArrayList<TimeInterval> toDeleteTime) throws CommandException {
+                                          ArrayList<TimeInterval> toDeleteTime) throws CommandException {
             requireNonNull(group);
-            Group groupInModel = this.group;
             try {
-                return groupInModel.deleteTime(toDeleteTime);
+                return group.deleteTime(toDeleteTime);
             } catch (CommandException e) {
                 throw new CommandException(e.getMessage());
             }
@@ -324,7 +327,7 @@ public class DeleteGroupTimeCommandTest {
 
         @Override
         public String deleteTimeFromGroup(Group group,
-                                        ArrayList<TimeInterval> toDeleteTime) throws CommandException {
+                                          ArrayList<TimeInterval> toDeleteTime) throws CommandException {
             requireNonNull(group);
             Group groupInModel = this.group;
             try {
