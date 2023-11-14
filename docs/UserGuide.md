@@ -127,7 +127,7 @@ We are happy to have you on board as a first-time user of ProjectPRO! To get sta
 --------------------------------------------------------------------------------------------------------------------
 
 
-Welcome back to ProjectPRO. Simply head over to our Features section to gain insights into our commands. If you are looking for a quick reference, click [here](#table-of-contents) for our table of contents.
+Welcome back to ProjectPRO. Simply head over to our Features section [here](#features) to gain insights into our commands.
 
 --------------------------------------------------------------------------------------------------------------------
 
