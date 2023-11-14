@@ -333,16 +333,6 @@ You can list all the contacts in your contact list.
 
 **Format:** `list`
 
-<p></p>
-<div style="border-left: 4px solid #56494C; background-color: #F1DEC6; color: #000; padding: 10px; margin: 5px 0; border-radius: 6px;">
-    <div style="display: flex; align-items: center;">
-    <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
-    <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
-  </div>
-  <p style="color: #000; margin: 8px 0;">
-    No additional input required.</p>
-</div>
-
 **Example(s):**
 - `list`  
   This displays all the contacts in the contact list.
@@ -484,16 +474,6 @@ You can find a group in your contact list. This allows you to view the group's m
 You can list all the groups in your contact list.
 
 **Format:** `listgroup`
-
-<p></p>
-<div style="border-left: 4px solid #56494C; background-color: #F1DEC6; color: #000; padding: 10px; margin: 5px 0; border-radius: 6px;">
-    <div style="display: flex; align-items: center;">
-    <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
-    <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
-  </div><p style="color: #000; margin: 8px 0;">
-   No additional parameters.
-</div>
-
 
 **Example(s):**
 - `listgroup`  
@@ -849,18 +829,6 @@ You can view the link to our User Guide.
 
 **Format:** `help`
 
-
-<p></p>
-<div style="border-left: 4px solid #56494C; background-color: #F1DEC6; color: #000; padding: 10px; margin: 5px 0; border-radius: 6px;">
-  <div style="display: flex; align-items: center;">
-    <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
-    <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
-  </div>
-  <p style="color: #000; margin: 8px 0;">
-    No additional input required.</p>
-</div>
-<p></p>
-
 **Example(s):**
 - `help`
 
@@ -883,19 +851,6 @@ Clears all entries from the contact list.
 
 **Format:** `clear`
 
-
-<p></p>
-<div style="border-left: 4px solid #56494C; background-color: #F1DEC6; color: #000; padding: 10px; margin: 5px 0; border-radius: 6px;">
-  <div style="display: flex; align-items: center;">
-    <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
-    <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable value(s)</h5>
-  </div>
-  <p style="color: #000; margin: 8px 0;">
-    No additional input required.</p>
-</div>
-<p></p>
-
-
 **Example(s):**
 - `clear`
 
@@ -914,20 +869,6 @@ Clears all entries from the contact list.
 You can exit ProjectPRO.
 
 **Format:** `exit`
-
-
-<p></p>
-<div style="border-left: 4px solid #56494C; background-color: #F1DEC6; color: #000; padding: 10px; margin: 5px 0; border-radius: 6px;">
-  <div style="display: flex; align-items: center;">
-    <img src="icons/checked.png" width="20" height="20" style="margin-right: 5px;">
-    <h5 style="color: #56494C; margin: 0 0 5px 0; padding-top: 5px;"> Acceptable values</h5>
-  </div>
-  <p style="color: #000; margin: 8px 0;">
-    No additional input required.</p>
-</div>
-<p></p>
-
-
 
 --------------------------------------------------------------------------------------------------------------------
 
